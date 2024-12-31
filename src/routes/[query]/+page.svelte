@@ -1,3 +1,10 @@
+<script lang="ts">
+  import type { PageData } from './$types'
+
+  export let data: PageData
+</script>
+
+<img src={`/${data.query}.png`} alt="generated image" class="mb-4" />
 <div class="grid grid-cols-8 gap-4">
   <img src="/images/bg0.png" alt="bg0" />
   <img src="/images/bg1.png" alt="bg1" />
@@ -19,6 +26,6 @@
 
 <style>
   img {
-    @apply rounded;
+    @apply rounded w-full aspect-[1200/630];
   }
 </style>
