@@ -1,8 +1,7 @@
 <script lang="ts">
-  import type { PageData } from './$types'
   import { onMount } from 'svelte'
 
-  let data: PageData = $props()
+  let { data } = $props()
   let bg: string = $state('0')
   let name: string = $state('名前')
   let text: string = $state('2025年の抱負')

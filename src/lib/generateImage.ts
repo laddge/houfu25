@@ -1,6 +1,4 @@
 import { readFileSync } from 'fs'
-import { fileURLToPath } from 'url'
-import path from 'path'
 import satori, { type SatoriOptions } from 'satori'
 import sharp from 'sharp'
 
