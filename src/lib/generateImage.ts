@@ -9,13 +9,13 @@ export const generateImage = async (
   name: string,
   text: string,
 ) => {
-  const fontBuffer = readFileSync(path.join(fileURLToPath(import.meta.url), '../ZenKakuGothicNew-Medium.ttf'))
+  const fontBuffer = readFileSync('src/lib/ZenKakuGothicNew-Medium.ttf')
   let imgUrl = ''
   try {
-    imgUrl = 'data:image/png;base64,' + readFileSync(path.join(fileURLToPath(import.meta.url), `../../../static/images/bg${bg}.png`), 'base64')
+    imgUrl = 'data:image/png;base64,' + readFileSync(`static/images/bg${bg}.png`, 'base64')
   } catch(e) {
     console.error(e)
-    imgUrl = 'data:image/png;base64,' + readFileSync(path.join(fileURLToPath(import.meta.url), '../../../static/images/bg0.png'), 'base64')
+    imgUrl = 'data:image/png;base64,' + readFileSync('static/images/bg0.png', 'base64')
   }
 
   const options: SatoriOptions = {
